@@ -1,5 +1,5 @@
 
- y = c(6,7,8,9,1,2,4,5,7,9)
+  y = c(2,3,1,2,3,4,5,3,3,1)
 
   vero.poisson
 
@@ -17,4 +17,4 @@
 # Repetindo o exercicio com um conjunto de dados gerados:
 
   set.seed(100)
-  dados.pois = rpois(50,lambda=6)  
+  dados.pois = rpois(50,lambda=6)  # lambda verdadeiro  igual a 6
