@@ -1,0 +1,17 @@
+  y = c(2,3,1,2,3,4,5,3,3,1)
+
+  vero.poisson
+
+  curve(vero.poisson(x,y=y),0,5,xlab=expression(lambda),ylab=expression(l(lambda,y)),lwd=2)
+
+  EMV.lambda.teorico = mean(y)
+  EMV.lambda.teorico
+
+  optimise(vero.poisson,interval=c(0,5),y=y,maximum=TRUE)
+  EMV.lambda.estimado = optimise(vero.poisson,interval=c(0,5),y,maximum=TRUE)$maximum
+  EMV.lambda.estimado
+
+  abline(v=EMV.lambda.estimado,col=2,lty=2,lwd=2)
+
+  set.seed(100)
+  dados.pois = rpois(50,lambda=6)  
